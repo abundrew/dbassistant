@@ -1,0 +1,311 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{D652EDE0-0F87-4A88-8A33-31F177424AC5}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>dbassistant</RootNamespace>
+    <AssemblyName>dbassistant</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ApplicationIcon>ico_table_multiple.ico</ApplicationIcon>
+    <IsWebBootstrapper>true</IsWebBootstrapper>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>4.0</OldToolsVersion>
+    <PublishUrl>C:\Project\DB Assistant\Publication\</PublishUrl>
+    <Install>false</Install>
+    <InstallFrom>Web</InstallFrom>
+    <UpdateEnabled>true</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <InstallUrl>http://www.dataject.com/apps/dbassistant/</InstallUrl>
+    <ProductName>DB Assistant</ProductName>
+    <PublisherName>Andrey Logunov</PublisherName>
+    <SuiteName>DB Assistant</SuiteName>
+    <CreateWebPageOnPublish>true</CreateWebPageOnPublish>
+    <WebPage>publish.htm</WebPage>
+    <ApplicationRevision>28</ApplicationRevision>
+    <ApplicationVersion>1.3.11.28</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup />
+  <PropertyGroup>
+    <GenerateManifests>true</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <TargetZone>LocalIntranet</TargetZone>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationManifest>Properties\app.manifest</ApplicationManifest>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Data.cs" />
+    <Compile Include="Extensions.cs" />
+    <Compile Include="FormAbout.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormAbout.Designer.cs">
+      <DependentUpon>FormAbout.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormConnect.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormConnect.Designer.cs">
+      <DependentUpon>FormConnect.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormMain.Designer.cs">
+      <DependentUpon>FormMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Settings.cs" />
+    <Compile Include="windows\CsvParser.cs" />
+    <Compile Include="windows\CsvWriter.cs" />
+    <Compile Include="windows\ReflectionInfo.cs" />
+    <Compile Include="windows\Resource.cs" />
+    <Compile Include="windows\Text.cs" />
+    <EmbeddedResource Include="FormAbout.resx">
+      <DependentUpon>FormAbout.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormConnect.resx">
+      <DependentUpon>FormConnect.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormMain.resx">
+      <DependentUpon>FormMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UCCode.resx">
+      <DependentUpon>UCCode.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UCQuery.resx">
+      <DependentUpon>UCQuery.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UCRoutineList.resx">
+      <DependentUpon>UCRoutineList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UCTable.resx">
+      <DependentUpon>UCTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UCTableList.resx">
+      <DependentUpon>UCTableList.cs</DependentUpon>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="app.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Properties\app.manifest" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="sample_queries\queries\a_employee_roles.sql" />
+    <None Include="sample_queries\queries\a_errors.sql" />
+    <None Include="sample_queries\queries\a_pending_date_in_tags.sql" />
+    <None Include="sample_queries\queries\a_permissions.sql" />
+    <None Include="sample_queries\queries\group.cfg" />
+    <None Include="sample_queries\queries\g_assessment_list.sql" />
+    <None Include="sample_queries\queries\g_assessment_list_duplicate_assessment_id.sql" />
+    <None Include="sample_queries\queries\j_todo_list_tasks.sql" />
+    <None Include="sample_queries\queries\t_employee_functions.sql" />
+    <None Include="sample_queries\queries\t_employee_roles.sql" />
+    <None Include="sample_queries\queries\t_employee_status.sql" />
+    <None Include="sample_queries\queries\t_errors.sql" />
+    <None Include="sample_queries\queries\t_it_logs.sql" />
+    <None Include="sample_queries\queries\t_permissions.sql" />
+    <None Include="sample_queries\queries\t_reassess_status.sql" />
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Query.cs" />
+    <Compile Include="QuerySet.cs" />
+    <Compile Include="UCCode.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UCCode.Designer.cs">
+      <DependentUpon>UCCode.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UCQuery.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UCQuery.Designer.cs">
+      <DependentUpon>UCQuery.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UCRoutineList.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UCRoutineList.Designer.cs">
+      <DependentUpon>UCRoutineList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UCTable.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UCTable.Designer.cs">
+      <DependentUpon>UCTable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UCTableList.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UCTableList.Designer.cs">
+      <DependentUpon>UCTableList.cs</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="ico_table_multiple.ico" />
+    <Content Include="image\ico\ico_table_multiple.ico" />
+    <Content Include="image\ico\lock_open.ico" />
+    <Content Include="image\png_128\ico_wait_128.png" />
+    <Content Include="image\png_16\ico_folder_16.png" />
+    <Content Include="image\png_16\ico_disk_16.png" />
+    <Content Include="image\png_16\ico_copying_and_distribution_16.png" />
+    <Content Include="image\png_16\ico_export_excel_16.png" />
+    <Content Include="image\png_16\ico_code_16.png" />
+    <Content Include="image\png_16\ico_cancel_16.png" />
+    <Content Include="image\png_16\ico_table_multiple_16.png" />
+    <Content Include="image\png_16\ico_user_16.png" />
+    <Content Include="image\png_16\ico_table_16.png" />
+    <Content Include="image\png_16\ico_source_code_16.png" />
+    <Content Include="image\png_16\ico_sql_join_16.png" />
+    <Content Include="image\png_16\ico_server_database_16.png" />
+    <Content Include="image\png_16\ico_lightning_16.png" />
+    <Content Include="image\png_16\ico_sql_join_left_16.png" />
+    <Content Include="image\png_16\ico_list_16.png" />
+    <Content Include="image\png_16\ico_key_d_16.png" />
+    <Content Include="image\png_16\ico_key_m_16.png" />
+    <Content Include="image\png_16\ico_key_p_16.png" />
+    <Content Include="image\png_16\ico_key_q_16.png" />
+    <Content Include="image\png_16\ico_key_s_16.png" />
+    <Content Include="image\png_16\ico_key_a_16.png" />
+    <Content Include="image\png_16\ico_key_b_16.png" />
+    <Content Include="image\png_16\ico_key_c_16.png" />
+    <Content Include="image\png_16\ico_key_e_16.png" />
+    <Content Include="image\png_32\ico_disk_32.png" />
+    <Content Include="image\png_32\ico_copying_and_distribution_32.png" />
+    <Content Include="image\png_32\ico_export_excel_32.png" />
+    <Content Include="image\png_32\ico_code_32.png" />
+    <Content Include="image\png_32\ico_cancel_32.png" />
+    <Content Include="image\png_32\ico_table_multiple_32.png" />
+    <Content Include="image\png_32\ico_user_32.png" />
+    <Content Include="image\png_32\ico_table_32.png" />
+    <Content Include="image\png_32\ico_source_code_32.png" />
+    <Content Include="image\png_32\ico_sql_join_32.png" />
+    <Content Include="image\png_32\ico_server_database_32.png" />
+    <Content Include="image\png_32\ico_lightning_32.png" />
+    <Content Include="image\png_32\ico_sql_join_left_32.png" />
+    <Content Include="image\png_32\ico_list_32.png" />
+    <Content Include="image\png_64\ico_wait_64.png" />
+    <Content Include="sample_queries\queries\assessments.txt" />
+    <Content Include="sample_queries\queries\gate.txt" />
+    <Content Include="sample_queries\queries\jgbtodolist.txt" />
+    <Content Include="sample_queries\queries\tags.txt" />
+    <Content Include="sample_xml\sample.xml">
+      <SubType>Designer</SubType>
+    </Content>
+    <EmbeddedResource Include="settings_template.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.2.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 2.0 %28x86%29</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.0 %28x86%29</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

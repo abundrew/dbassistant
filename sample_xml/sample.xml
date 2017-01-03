@@ -1,0 +1,76 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<DBAssistant>
+  <ConnectionString>Data Source=72.55.179.48;Initial Catalog=R4H_testing;Integrated Security=false;User Id=r4h_testuser;Password=RTT3GH4324</ConnectionString>
+  <GroupItems>
+    <GroupItem>
+      <GroupItemName>A</GroupItemName>
+      <QueryItems>
+        <QueryItem>
+          <QueryItemName>A1</QueryItemName>
+          <QueryItemText>
+---------------------------------------------------------------------------------------------------
+-- [*] Description = SELECT TOP 100 FROM GenericShearText
+-- [*] Parameter Generic Object Owner ID = @genericObjectOwnerID int NULL 
+-- [*] Parameter Generic Feature Name = @genericFeatureName string NULL
+---------------------------------------------------------------------------------------------------
+SELECT TOP 100 * FROM R4H_testing.dbo.GenericShearText
+WHERE
+  (@genericObjectOwnerID IS NULL OR GenericObjectOwnerID = @genericObjectOwnerID) AND
+  (@genericFeatureName IS NULL OR GenericFeatureName LIKE @genericFeatureName)
+---------------------------------------------------------------------------------------------------
+          </QueryItemText>
+        </QueryItem>
+        <QueryItem>
+          <QueryItemName>A2</QueryItemName>
+          <QueryItemText>
+---------------------------------------------------------------------------------------------------
+-- [*] Description = SELECT TOP 100 FROM GenericShearText
+-- [*] Parameter Generic Object Owner ID = @genericObjectOwnerID int NULL 
+-- [*] Parameter Generic Feature Name = @genericFeatureName string NULL
+---------------------------------------------------------------------------------------------------
+SELECT TOP 100 * FROM R4H_testing.dbo.GenericShearText
+WHERE
+  (@genericObjectOwnerID IS NULL OR GenericObjectOwnerID = @genericObjectOwnerID) AND
+  (@genericFeatureName IS NULL OR GenericFeatureName LIKE @genericFeatureName)
+---------------------------------------------------------------------------------------------------
+          </QueryItemText>
+        </QueryItem>
+      </QueryItems>
+    </GroupItem>
+    <GroupItem>
+      <GroupItemName>B</GroupItemName>
+      <QueryItems>
+        <QueryItem>
+          <QueryItemName>B1</QueryItemName>
+          <QueryItemText>
+---------------------------------------------------------------------------------------------------
+-- [*] Description = SELECT TOP 100 FROM GenericShearText
+-- [*] Parameter Generic Object Owner ID = @genericObjectOwnerID int NULL 
+-- [*] Parameter Generic Feature Name = @genericFeatureName string NULL
+---------------------------------------------------------------------------------------------------
+SELECT TOP 100 * FROM R4H_testing.dbo.GenericShearText
+WHERE
+  (@genericObjectOwnerID IS NULL OR GenericObjectOwnerID = @genericObjectOwnerID) AND
+  (@genericFeatureName IS NULL OR GenericFeatureName LIKE @genericFeatureName)
+---------------------------------------------------------------------------------------------------
+          </QueryItemText>
+        </QueryItem>
+        <QueryItem>
+          <QueryItemName>B2</QueryItemName>
+          <QueryItemText>
+---------------------------------------------------------------------------------------------------
+-- [*] Description = SELECT TOP 100 FROM GenericShearText
+-- [*] Parameter Generic Object Owner ID = @genericObjectOwnerID int NULL 
+-- [*] Parameter Generic Feature Name = @genericFeatureName string NULL
+---------------------------------------------------------------------------------------------------
+SELECT TOP 100 * FROM R4H_testing.dbo.GenericShearText
+WHERE
+  (@genericObjectOwnerID IS NULL OR GenericObjectOwnerID = @genericObjectOwnerID) AND
+  (@genericFeatureName IS NULL OR GenericFeatureName LIKE @genericFeatureName)
+---------------------------------------------------------------------------------------------------
+          </QueryItemText>
+        </QueryItem>
+      </QueryItems>
+    </GroupItem>
+  </GroupItems>
+</DBAssistant>

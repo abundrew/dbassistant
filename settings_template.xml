@@ -1,0 +1,76 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<DBAssistant>
+  <ConnectionString>Data Source=server_address_or_empty;Initial Catalog=database_name_or_empty;Integrated Security=false;User Id=user_name_or_empty;Password=password_or_empty</ConnectionString>
+  <GroupItems>
+    <GroupItem>
+      <GroupItemName>A</GroupItemName>
+      <QueryItems>
+        <QueryItem>
+          <QueryItemName>A1</QueryItemName>
+          <QueryItemText>
+            ---------------------------------------------------------------------------------------------------
+            -- [*] Description = description text
+            -- [*] Parameter Parameter 1 Name = @parameter1 int NULL
+            -- [*] Parameter Parameter 2 Name = @parameter2 string NULL
+            ---------------------------------------------------------------------------------------------------
+            SELECT * FROM database_name.dbo.table_name
+            WHERE
+            (@parameter1 IS NULL OR column_name_1 = @parameter1) AND
+            (@parameter2 IS NULL OR column_name_2 LIKE @parameter2)
+            ---------------------------------------------------------------------------------------------------
+          </QueryItemText>
+        </QueryItem>
+        <QueryItem>
+          <QueryItemName>A2</QueryItemName>
+          <QueryItemText>
+            ---------------------------------------------------------------------------------------------------
+            -- [*] Description = description text
+            -- [*] Parameter Parameter 1 Name = @parameter1 int NULL
+            -- [*] Parameter Parameter 2 Name = @parameter2 string NULL
+            ---------------------------------------------------------------------------------------------------
+            SELECT * FROM database_name.dbo.table_name
+            WHERE
+            (@parameter1 IS NULL OR column_name_1 = @parameter1) AND
+            (@parameter2 IS NULL OR column_name_2 LIKE @parameter2)
+            ---------------------------------------------------------------------------------------------------
+          </QueryItemText>
+        </QueryItem>
+      </QueryItems>
+    </GroupItem>
+    <GroupItem>
+      <GroupItemName>B</GroupItemName>
+      <QueryItems>
+        <QueryItem>
+          <QueryItemName>B1</QueryItemName>
+          <QueryItemText>
+            ---------------------------------------------------------------------------------------------------
+            -- [*] Description = description text
+            -- [*] Parameter Parameter 1 Name = @parameter1 int NULL
+            -- [*] Parameter Parameter 2 Name = @parameter2 string NULL
+            ---------------------------------------------------------------------------------------------------
+            SELECT * FROM database_name.dbo.table_name
+            WHERE
+            (@parameter1 IS NULL OR column_name_1 = @parameter1) AND
+            (@parameter2 IS NULL OR column_name_2 LIKE @parameter2)
+            ---------------------------------------------------------------------------------------------------
+          </QueryItemText>
+        </QueryItem>
+        <QueryItem>
+          <QueryItemName>B2</QueryItemName>
+          <QueryItemText>
+            ---------------------------------------------------------------------------------------------------
+            -- [*] Description = description text
+            -- [*] Parameter Parameter 1 Name = @parameter1 int NULL
+            -- [*] Parameter Parameter 2 Name = @parameter2 string NULL
+            ---------------------------------------------------------------------------------------------------
+            SELECT * FROM database_name.dbo.table_name
+            WHERE
+            (@parameter1 IS NULL OR column_name_1 = @parameter1) AND
+            (@parameter2 IS NULL OR column_name_2 LIKE @parameter2)
+            ---------------------------------------------------------------------------------------------------
+          </QueryItemText>
+        </QueryItem>
+      </QueryItems>
+    </GroupItem>
+  </GroupItems>
+</DBAssistant>

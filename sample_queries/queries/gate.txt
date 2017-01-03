@@ -1,0 +1,2 @@
+G - Assessment List = g_assessment_list.sql
+G - Duplicate Assessment ID = g_assessment_list_duplicate_assessment_id.sql
